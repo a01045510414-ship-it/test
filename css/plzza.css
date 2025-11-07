@@ -1,0 +1,490 @@
+* {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    background-color: #fff8e6;
+    color: #3b1d0f;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header_main {
+    background-color: #ff4747;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.member_main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 6px 20px;
+}
+
+.member_containers {
+    display: flex;
+    gap: 18px;
+}
+
+.auth {
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.logo_navbar-containers {
+    width: 100%;
+    display: flex;
+    background: #fff8e6;
+    border-bottom: 4px solid #ff4747;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo_navbar-serve-containers {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.navbar {
+    gap: 40px;
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu .menu {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.navbar-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background-color: #ff4747;
+    transition: width 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+.navbar-menu .menu:hover {
+    color: #ff4747;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%;
+}
+
+/* 베너 */
+.pizza-banner {
+    width: 300vw;
+    height: 450px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    transition: transform 0.4s ease;
+    /* position: relative; */
+    /* width: 100%; */
+    /* overflow: hidden; */
+}
+
+.banner-slide {
+    width: 100vw;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+    /* position: absolute; */
+    /* width: 100%; */
+    /* opacity: 0; */
+}
+
+/* .banner-slide.active {
+    opacity: 1;
+} */
+
+.banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(255, 71, 71, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* 배달, 포장 버튼 */
+.order-main {
+    background: linear-gradient(135deg, #ff4747, #ffb84d);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    border-top: 5px solid #b32020;
+    border-bottom: 5px solid #b32020;
+    margin: 0;
+    /* padding: 0; */
+}
+
+.order_serve {
+    cursor: pointer;
+    display: flex;
+    background-color: #fff;
+    color: #fff;
+    width: 300px;
+    height: 80px;
+    margin-left: 60px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(179, 32, 32, 0.2);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    /* padding: 20px 60px; */
+    /* overflow: hidden; */
+    /* border-radius: 50px; */
+    /* transition: all 0.3s ease; */
+}
+
+.order_serve:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(255, 71, 71, 0.35);
+}
+
+.delivery {
+    background-color: #ff4747;
+}
+
+.delivery:hover {
+    background-color: #b32020;
+}
+
+.packaging {
+    background-color: #ffb84d;
+    color: #3b1d0f;
+}
+
+.packaging:hover {
+    background-color: #ffda75;
+}
+
+/* 피자 */
+.introduction_title-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.grand-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #b32020;
+    text-shadow: 2px 2px 6px rgba(255, 180, 0, 0.4);
+    letter-spacing: 2px;
+}
+
+.subheading {
+    font-size: 1.1rem;
+    color: #5c3d1f;
+    margin-top: 10px;
+}
+
+.food_content {
+    background: linear-gradient(135deg, #ff4747, #ffb84d);
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.food_main {
+    background-color: #fff8e6;
+    width: 1280px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 60px;
+}
+
+.pizza_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+.pizza-serve {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.pizza-serve:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(255, 71, 71, 0.25);
+}
+
+.pizza_img-content img {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.pizza-serve:hover img {
+    transform: scale(1.05);
+}
+
+.pizza-name {
+    font-size: 1.3rem;
+    color: #b32020;
+    margin: 15px 0 10px;
+}
+
+.pizza-text {
+    color: #5c3d1f;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.pizza-price {
+    font-size: 1.1rem;
+    color: #ff4747;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.view-content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-menu {
+    background-color: #ff4747;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(255, 71, 71, 0.4);
+    text-decoration: none;
+    /* transition: all 0.3s ease; */
+}
+
+.view-menu:hover {
+    background-color: #ffb84d;
+    /* transform: translateY(-3px); */
+}
+
+span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.view-content:hover span {
+    color: #3b1d0f;
+}
+
+/* 혜택 */
+.benefit_content {
+    background-color: #fff8e6;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.benefit_main {
+    background-color: #ffffff;
+    width: 1280px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+}
+
+.benefit-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-serve {
+    background-color: #fff3d6;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(255, 184, 77, 0.3);
+}
+
+.benefit-serve:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 184, 77, 0.5);
+}
+
+.benefit_img-content img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.benefit-name {
+    color: #b32020;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.benefit-text {
+    font-size: 0.95rem;
+    color: #3b1d0f;
+    margin-bottom: 20px;
+}
+
+/* 기타 정보 */
+.footer-main {
+    background-color: #3b1d0f;
+    color: #fcecc9;
+    width: 100%;
+    padding: 50px 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    border-top: 5px solid #ff4747;
+    /* width: 90%; */
+}
+
+.information-main-1 {
+    color: #fff8e6;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    /* gap: 25px; */
+    /* cursor: pointer; */
+}
+
+.information-1 {
+    color: #fff8e6;
+    display: inline;
+    margin: 20px;
+}
+
+.information-1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.information-1:hover, .information-1 a:hover {
+    color: #ffb84d;
+}
+
+
+.information-main-2 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    /* margin-top: 9px; */
+}
+
+.information-2 {
+    color: #f1d9b5;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-style: normal;
+}
+
+p > a {
+    color: #f1d9b5;
+    text-decoration: none;
+}
+
+footer::after {
+    content: "🍕 Thank you for visiting our Pizza Store 🍕";
+    display: block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #ffcf70;
+    /* opacity: 0.9; */
+}
+
+@media screen and (max-width: 768px){
+.grand-title{
+    font-size: 2.0rem;
+}
+
+.subheading{
+    font-size: 0.9rem;
+}
+
+.order-main{
+    flex-wrap: wrap;
+}
+
+.order_serve{
+    margin: 10px;
+}
+}
